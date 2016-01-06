@@ -1,0 +1,37 @@
+<ion-view view-title="Profile">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/newmaterial.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="content profile-avatar">
+                <div class="avatar" style="background-image: url('img/Kwena-avatar.jpg');"></div>
+                <h3><a class="light">Kwena Morukhuladi</a></h3>
+                <h4>@TheRealKwena</h4>
+            </div>
+        </div>
+
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a ui-sref="app.activity" class="tab-item">
+                <i class="profile-stat-count">1300</i> Followers
+            </a>
+            <a ui-sref="app.friends" class="tab-item">
+                <i class="profile-stat-count">457</i> Following
+            </a>
+            <a ui-sref="app.gallery" class="tab-item">
+                <i class="profile-stat-count">10</i> Favourites
+            </a>
+        </div>
+        <h4 class="content padding double-padding-x">Recommendations</h4>
+        <div class="list card animate-ripple" ng-repeat="event in events">
+            <img class="full-image" src="{{event.user.picture.large}}">
+            <div class="item item-body">
+                <p>
+                    This is a "Facebook" styled Card. The header is created from a Thumbnail List item...
+                </p>
+                <p>
+                    <a href="#" class="subdued">1 Like</a>
+                    <a href="#" class="subdued">5 Comments</a>
+                </p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
